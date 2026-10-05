@@ -10,33 +10,15 @@
   
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    .form-control {
-      width: 100%;
-      padding: 0.85rem 1rem;
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid var(--border-glass);
-      border-radius: var(--radius-sm);
-      color: #fff;
-      font-size: 0.95rem;
-      outline: none;
-      transition: var(--transition);
-      margin-top: 0.4rem;
-      font-family: inherit;
-    }
-    .form-control:focus {
-      border-color: var(--sky-light);
-      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
-    }
-  </style>
 </head>
 <body>
 
   <div id="header-root"></div>
 
   <main class="container" style="padding: 3.5rem 1.5rem;">
-    <div style="max-width: 720px; margin: 0 auto;">
+    <div style="max-width: 720px; margin: 0 auto;" class="fade-in-hero">
       <span class="badge badge-active"><i class="fa-solid fa-paper-plane"></i> Contact</span>
       <h1 style="font-size: 2.4rem; margin-top: 0.6rem;">Get In <span class="gradient-text-sky">Touch</span></h1>
       <p style="color: var(--text-secondary); margin-top: 0.5rem;">
@@ -44,7 +26,7 @@
       </p>
 
       <!-- Active Mailto Trigger Form -->
-      <div class="card" style="margin-top: 2rem;">
+      <div class="card animate-reveal" style="margin-top: 2rem;">
         <form id="portfolio-contact-form">
           <div style="margin-bottom: 1.25rem;">
             <label for="form-name" style="font-size: 0.9rem; color: var(--silver-light);">Your Name</label>
@@ -68,7 +50,7 @@
       </div>
 
       <!-- Direct Reach-out Options -->
-      <div class="grid-2" style="margin-top: 2rem;">
+      <div class="grid-2 animate-reveal" style="margin-top: 2rem;">
         <div class="card" style="text-align: center;">
           <i class="fa-brands fa-github" style="font-size: 2rem; color: var(--silver-light); margin-bottom: 0.5rem;"></i>
           <h4>GitHub</h4>

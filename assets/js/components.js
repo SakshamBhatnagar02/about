@@ -1,12 +1,11 @@
 /* ==========================================================================
    Central Portfolio Config
-   Update your genuine contact & profile links once here.
    ========================================================================== */
 const PORTFOLIO_CONFIG = {
   authorName: "Saksham Bhatnagar",
-  // Replace with your real contact email and GitHub URL
   email: "bhatnagarsaksham50@proton.me", 
-  githubUrl: "https://github.com/SakshamBhatnagar02", 
+  githubUrl: "https://github.com/sakshambhatnagar02", 
+  gravatarUrl: "https://gravatar.com/sakshambhatnagar",
   activeYear: "2026"
 };
 
@@ -14,14 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
   renderHeader();
   renderFooter();
   setupContactFormHandler();
+  initScrollAnimations();
 });
 
-// Identify active navigation view
+// Strict filename detection to avoid false active matches
 function getActivePage() {
-  const path = window.location.pathname.toLowerCase();
-  if (path.includes("about")) return "about";
-  if (path.includes("projects")) return "projects";
-  if (path.includes("contact")) return "contact";
+  const pathname = window.location.pathname.toLowerCase().replace(/\/$/, "");
+
+  if (pathname.endsWith("/about.html") || pathname.endsWith("/about")) return "about";
+  if (pathname.endsWith("/projects.html") || pathname.endsWith("/projects")) return "projects";
+  if (pathname.endsWith("/contact.html") || pathname.endsWith("/contact")) return "contact";
+
   return "home";
 }
 
@@ -74,12 +76,15 @@ function renderFooter() {
             &copy; ${PORTFOLIO_CONFIG.activeYear} ${PORTFOLIO_CONFIG.authorName} &bull; Built with precision and code.
           </p>
           <p style="font-size: 0.85rem; color: var(--silver); margin-top: 0.3rem;">
-            Class 12 Non-Medical &bull; JEE Aspirant &bull; Web & Application Developer
+            Class 12 Non-Medical &bull; IITian Classes, Bathinda &bull; Gurdaspur, India <span class="fi fi-in"></span>
           </p>
         </div>
         <div class="social-links">
           <a href="${PORTFOLIO_CONFIG.githubUrl}" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile">
             <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="${PORTFOLIO_CONFIG.gravatarUrl}" target="_blank" rel="noopener noreferrer" class="social-link" title="Gravatar Profile">
+            <img src="assets/img/gravatar.svg" alt="Gravatar" class="social-svg-icon">
           </a>
           <a href="mailto:${PORTFOLIO_CONFIG.email}" class="social-link" title="Send Direct Email">
             <i class="fa-solid fa-envelope"></i>
@@ -90,7 +95,7 @@ function renderFooter() {
   `;
 }
 
-// Redirects form input into an email client mailto URL
+// Mailto Redirect Form Handler
 function setupContactFormHandler() {
   const form = document.getElementById("portfolio-contact-form");
   if (!form) return;
@@ -113,7 +118,23 @@ function setupContactFormHandler() {
       `Sent via Saksham.dev Portfolio Form`
     );
 
-    // Automatically launches user's default email client
     window.location.href = `mailto:${PORTFOLIO_CONFIG.email}?subject=${subject}&body=${bodyContent}`;
   });
+}
+
+// Lightweight Scroll-Reveal Observer
+function initScrollAnimations() {
+  const animatedElements = document.querySelectorAll(".animate-reveal");
+  if (!animatedElements.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  animatedElements.forEach((el) => observer.observe(el));
 }

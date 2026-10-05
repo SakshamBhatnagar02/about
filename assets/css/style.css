@@ -452,6 +452,19 @@ h1, h2, h3, h4 {
   transition: var(--transition);
 }
 
+/* Gravatar / Local SVG Social Icon */
+.social-svg-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  object-fit: contain;
+  transition: var(--transition);
+}
+
+.social-link:hover .social-svg-icon {
+  filter: brightness(0) invert(1); /* Turns pure white on hover to match Font Awesome icons */
+}
+
 .social-link:hover {
   background: var(--sky-blue);
   color: #fff;
@@ -505,4 +518,96 @@ h1, h2, h3, h4 {
     flex-direction: column;
     text-align: center;
   }
+}
+/* ==========================================================================
+   Flag Icons & Animation Styling
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Flag Icon sizing and rounding */
+.fi {
+  border-radius: 3px;
+  vertical-align: middle;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   Keyframe Animations
+   ========================================================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+/* Scroll Reveal Classes */
+.animate-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.animate-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Instant Hero Entrance */
+.fade-in-hero {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+/* Interactive Quick-Fact Badges */
+.fact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1.1rem;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+.fact-item:hover {
+  border-color: var(--sky-light);
+  transform: translateY(-2px);
+  background: rgba(30, 41, 59, 0.8);
+}
+.fact-icon {
+  font-size: 1.25rem;
+  color: var(--sky-light);
+  min-width: 24px;
+  text-align: center;
+}
+.fact-content h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--silver);
+  margin-bottom: 0.15rem;
+}
+.fact-content p, .fact-content a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+.fact-content a:hover {
+  color: var(--sky-light);
 }

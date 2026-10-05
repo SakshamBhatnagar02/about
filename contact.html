@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Saksham Bhatnagar</title>
+  
+  <meta name="description" content="Get in touch with Saksham Bhatnagar for website development, bug testing, or collaboration on web projects.">
+  <meta name="theme-color" content="#090e17">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .form-control {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-sm);
+      color: #fff;
+      font-size: 0.95rem;
+      outline: none;
+      transition: var(--transition);
+      margin-top: 0.4rem;
+      font-family: inherit;
+    }
+    .form-control:focus {
+      border-color: var(--sky-light);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-root"></div>
+
+  <main class="container" style="padding: 3.5rem 1.5rem;">
+    <div style="max-width: 720px; margin: 0 auto;">
+      <span class="badge badge-active"><i class="fa-solid fa-paper-plane"></i> Contact</span>
+      <h1 style="font-size: 2.4rem; margin-top: 0.6rem;">Get In <span class="gradient-text-sky">Touch</span></h1>
+      <p style="color: var(--text-secondary); margin-top: 0.5rem;">
+        Have a project or collaboration idea? Feel free to get in touch. Submitting this form will prepare an email directly in your email app.
+      </p>
+
+      <!-- Active Mailto Trigger Form -->
+      <div class="card" style="margin-top: 2rem;">
+        <form id="portfolio-contact-form">
+          <div style="margin-bottom: 1.25rem;">
+            <label for="form-name" style="font-size: 0.9rem; color: var(--silver-light);">Your Name</label>
+            <input type="text" id="form-name" required class="form-control" placeholder="Saksham Bhatnagar">
+          </div>
+
+          <div style="margin-bottom: 1.25rem;">
+            <label for="form-email" style="font-size: 0.9rem; color: var(--silver-light);">Your Email</label>
+            <input type="email" id="form-email" required class="form-control" placeholder="name@domain.com">
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <label for="form-message" style="font-size: 0.9rem; color: var(--silver-light);">Message</label>
+            <textarea id="form-message" rows="5" required class="form-control" placeholder="Describe your project, timeline, or inquiry..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <i class="fa-solid fa-paper-plane"></i> Send Email
+          </button>
+        </form>
+      </div>
+
+      <!-- Direct Reach-out Options -->
+      <div class="grid-2" style="margin-top: 2rem;">
+        <div class="card" style="text-align: center;">
+          <i class="fa-brands fa-github" style="font-size: 2rem; color: var(--silver-light); margin-bottom: 0.5rem;"></i>
+          <h4>GitHub</h4>
+          <p style="color: var(--silver); font-size: 0.85rem; margin-top: 0.3rem;">Explore my open-source code</p>
+          <a href="https://github.com/sakshambhatnagar02" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;">
+            Visit Profile
+          </a>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <i class="fa-solid fa-envelope-open-text" style="font-size: 2rem; color: var(--sky-light); margin-bottom: 0.5rem;"></i>
+          <h4>Direct Email</h4>
+          <p style="color: var(--silver); font-size: 0.85rem; margin-top: 0.3rem;">Reach me directly via inbox</p>
+          <a href="mailto:bhatnagarsaksham50@proton.me" class="btn btn-secondary" style="margin-top: 1rem; width: 100%;">
+            Open Email Client
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script src="assets/js/components.js"></script>
+</body>
+</html>

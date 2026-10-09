@@ -1,55 +1,70 @@
-# Saksham Bhatnagar — Portfolio
+Saksham Bhatnagar — Portfolio
 
-My personal portfolio website showcasing my skills, projects, services, and experience in web development, software testing, app development, and digital content creation.
+My personal portfolio website showcasing my skills, projects, and services in web development, software testing, app development, and digital content creation.
 
-## 🌐 About
+🌐 About
 
-This portfolio was created to provide a central place to showcase my development projects, technical skills, and the work I have done while learning and experimenting with different technologies.
+I'm a student developer from India passionate about building websites, web applications, and digital projects. This portfolio brings together my projects, technical skills, and services in one place.
 
-## ✨ Features
+✨ Features
 
-- Responsive design
-- Home page with personal introduction
-- About & Skills section
-- Project showcase
-- Services section
-- Contact section
-- Mobile-friendly navigation
-- Clean and simple UI
+- 📱 Responsive, mobile-friendly design
+- 👋 Personal introduction and About section
+- 🛠️ Technical skills and technologies
+- 🚀 Featured projects showcase
+- 💼 Services and capabilities
+- 📬 Contact section
+- 🧭 Simple navigation
 
-## 🛠️ Technologies
+🛠️ Technologies
 
 - HTML5
 - CSS3
 - JavaScript
 - Responsive Web Design
 
-## 📂 Featured Projects
+📂 Featured Projects
 
-### GPLMods
-Full-stack project developed using Node.js, Express.js, MongoDB, and Backblaze B2.
+GPLMods
 
-### Pocket Classics
-HTML-based game available on the web, as a PWA, and as an Android APK.
+A full-stack platform developed using Node.js, Express.js, MongoDB, and Backblaze B2.
 
-### GamingNetIndia
-Independent Indian game development project featuring gaming projects including Guess The Mobile Game and Pocket Classics.
+🔗 "Visit GPLMods" (https://gplmods.webredirect.org)
 
-### YT Stuff
-Blogging and online media project.
+Pocket Classics
 
-## 🚀 Deployment
+An HTML-based game available on the web, as a Progressive Web App (PWA), and as an Android APK.
 
-This portfolio is a static website and can be deployed using platforms such as GitHub Pages or Cloudflare Pages.
+🔗 "GitHub Repository" (https://github.com/GamingNetIndia/pocketclassics)
 
-## 📄 License
+GamingNetIndia
 
-See the [LICENSE](LICENSE) file for information about the use and distribution of this project.
+An independent Indian game development studio/project featuring Guess The Mobile Game and Pocket Classics.
 
-## 📬 Contact
+🔗 "Visit GamingNetIndia" (https://gamingnetindia.great-site.net)
 
-For collaborations, project discussions, or other inquiries, please visit my portfolio website.
+YT Stuff
+
+A blogging and online media project.
+
+🔗 "Visit YT Stuff" (https://ytstuff.great-site.net)
+
+🚀 Deployment
+
+This is a static website that can be hosted using platforms such as GitHub Pages or Cloudflare Pages.
+
+📄 License
+
+This project is licensed under the MIT License. See the "LICENSE" (LICENSE) file for details.
+
+📬 Contact
+
+- Portfolio: "View Portfolio" (https://sakshambhatnagar02.github.io/about/)
+- Email: "bhatnagarsaksham50@proton.me" (mailto:bhatnagarsaksham50@proton.me)
+- Gravatar: "View Profile" (https://gravatar.com/phenomenalcae4ab06ec)
+
+For project inquiries, collaborations, or feedback, feel free to get in touch.
 
 ---
 
-Made by **Saksham Bhatnagar**
+Made with ❤️ by Saksham Bhatnagar

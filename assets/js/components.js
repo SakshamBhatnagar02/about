@@ -201,6 +201,7 @@ function initScrollAnimations() {
 /* ==========================================================================
    Floating Back-to-Top Overlay Component
    ========================================================================== */
+// Floating Back-to-Top Overlay with tap animation & auto-reset
 function setupFloatingBackToTop() {
   if (document.getElementById("floatingBackToTop")) return;
 
@@ -220,8 +221,18 @@ function setupFloatingBackToTop() {
     }
   }, { passive: true });
 
-  // Smooth scroll back to top on click
+  // On Tap / Click: Changes color immediately, scrolls up, and automatically resets
   btn.addEventListener("click", () => {
+    // 1. Immediately flash active color & glow
+    btn.classList.add("tapped");
+
+    // 2. Smoothly scroll to the top
     window.scrollTo({ top: 0, behavior: "smooth" });
+
+    // 3. Automatically reset color back to normal after 400ms
+    setTimeout(() => {
+      btn.classList.remove("tapped");
+      btn.blur();
+    }, 400);
   });
 }
